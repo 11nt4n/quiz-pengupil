@@ -38,6 +38,7 @@ jobs:
       run: |
         # Mengubah koneksi.php agar sesuai dengan credentials Github Actions
         sed -i "s/\$password = '';/\$password = 'root';/g" koneksi.php
+        sed -i "s/\$host     = 'localhost';/\$host     = '127.0.0.1';/g" koneksi.php
 
     - name: Start PHP Server in Background
       run: |
